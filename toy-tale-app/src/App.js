@@ -1,28 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { toys } from './resources/toys.js';
+import Header from './containers/header';
+import ToyList from './containers/toylist';
+import Addtoy from './components/addtoy';
+import Addform from './components/addform';
+// import './Index.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+
+    state = {
+        toys: [],
+        viewform: false
+    }
+    
+    componentDidMount = () => {
+        this.setState({ toys: toys })
+    }
+
+    renderForm = () => {
+        this.setState({ viewform: !this.state.viewform })
+    }
+
+
+    render() {
+        return (
+            <div className="toy-body">
+                <Header />
+                {(this.state.viewform) ? <Addform /> : null }
+                <Addtoy renderForm={this.renderForm} />
+                <ToyList toys={this.state.toys}/>
+            </div>
+        );
+    }
 }
 
 export default App;

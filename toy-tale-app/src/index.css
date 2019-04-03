@@ -1,9 +1,9 @@
-body {
+.toy-body {
   margin: 0;
   font-family: monospace;
 }
 
-#toy-header {
+.toy-header {
   display: flex;
   justify-content: center;
   background: #515DA2;
