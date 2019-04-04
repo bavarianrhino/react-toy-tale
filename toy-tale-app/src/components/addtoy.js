@@ -8,7 +8,7 @@ class Addtoy extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="">
                 <p>Add a Toy!!</p>
                 <button onClick={this.handleClick}>Add Toy</button>
             </div>

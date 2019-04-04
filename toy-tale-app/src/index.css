@@ -12,6 +12,15 @@
   padding: 1rem;
 }
 
+.toy-header-form {
+  display: flex;
+  justify-content: center;
+  background: #515DA2;
+  opacity: .8;
+  height: 12rem;
+  padding: 1rem;
+}
+
 #toy-header img {
   height: 6rem;
   width: auto;

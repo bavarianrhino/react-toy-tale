@@ -3,9 +3,9 @@ import Toy from '../components/toy';
 
 class ToyList extends React.Component {
 
-    rendertoys = (props) => {
-        return this.props.toys.map((toy) =>{
-            return <Toy key={toy.id} toy={toy} />
+    rendertoys = () => {
+        return this.props.toys.map((toy) => {
+            return <Toy key={toy.id} toy={toy} handleLike={this.props.handleLike} />
         })
     }
 

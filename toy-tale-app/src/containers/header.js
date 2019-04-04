@@ -5,7 +5,7 @@ class Header extends React.Component {
     render() {
         return (
             <div className="toy-header">
-                <a className="">Something</a>
+                <p>This Is The Pokemon Image</p>
             </div>
         )
     }
